@@ -1,0 +1,237 @@
+// FontAwesome
+
+@font-face {
+	font-family: "Font Awesome 5 Free";
+	src: url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+%fontAwesome{
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* https://google-webfonts-helper.herokuapp.com/fonts */
+
+/* work-sans-regular - latin */
+@font-face {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('../fonts/work-sans-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/work-sans-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* work-sans-500 - latin */
+  @font-face {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	src: local(''),
+		 url('../fonts/work-sans-v7-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/work-sans-v7-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* work-sans-600 - latin */
+  @font-face {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 600;
+	src: local(''),
+		 url('../fonts/work-sans-v7-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/work-sans-v7-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* work-sans-700 - latin */
+  @font-face {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+		 url('../fonts/work-sans-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/work-sans-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* work-sans-800 - latin */
+  @font-face {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 800;
+	src: local(''),
+		 url('../fonts/work-sans-v7-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/work-sans-v7-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+/*
+ 12px = 0.75rem
+ 14px = 0.875rem
+ 16px = 1rem
+ 20px = 1.25rem
+ 24px = 1.5rem
+ 28px = 1.75rem
+ 32px = 2rem
+ 40px = 2.5rem
+ 44px = 2.75rem
+ 48px = 3rem
+ 56px = 3.5rem;
+*/
+
+*{
+	font-family: 'Work Sans';
+	font-weight: $regular;
+	text-decoration: none;
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul, ol{
+	list-style: none;
+}
+
+
+*:focus { outline: none; }
+
+// .focus-visible {
+// 	box-shadow: 0 0 0 2px lighten($cor, 20%);
+// }
+
+
+h1{ 
+	font-size: 2.25rem; 
+	font-weight: $bold; 
+	margin-bottom: 1rem; 
+	line-height: 1;
+	color: $preto;
+}
+
+h2{ 
+	font-size: 1.75rem; 
+	font-weight: $bold; 
+	margin-bottom: 1rem; 
+	display: block; 
+	width: 100%;
+}
+
+span { 
+	color: $preto; 
+	font-weight: $bold; 
+	font-size: 1rem;  
+}
+
+strong{ font-weight: $semibold;}
+
+a{ 
+	color: $preto-texto; 
+	font-weight: $semibold; 
+	font-size: 0.875rem;
+	transition: .3s ease-in-out;
+	
+	&.ativo, &:hover{
+		color: $preto-medio;
+		font-weight: $bold;
+	}
+}
+
+
+p{  
+	line-height: 1.7; 
+	font-size: 1.125rem; 
+	max-width: 736px;
+	color: $preto-claro;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+	width: 0.75rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: $border;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: $preto-texto;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: $preto-claro;
+	transition: .7s ease-in;
+	cursor: scroll;
+  }
+
+  img{
+	max-width: 100%;
+  }
+
+  .tecla{
+	  padding: 0.375rem 0.875rem 0.675rem;
+	  display: inline-block;
+	  color: $branco;
+	  font-size: 1.125rem;
+	  margin-top: 1rem;
+	  margin-right: 1rem;
+	  line-height: 1;
+	  max-width: 340px;
+	  text-transform: lowercase;
+	  font-variant: small-caps;
+	  font-weight: $semibold;
+	  background: $preto-medio;
+	  border-radius: 2px;
+  }
+
+
+.container{
+	padding: 0 1.25rem;
+	margin: 72px+60px auto;
+	max-width: 768px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	img{ background: $preto-texto;}
+
+	> img{
+		height: 400px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	> p{
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+	}
+
+	.conteudo{ 
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding-top: 120px;
+
+		img{
+			max-width: calc(50% - 1rem);
+			width: 100%;
+			height: 200px;
+			display: block;
+			border-radius: 4px;
+			object-fit: cover;
+			object-position: left center;
+		}
+
+		p{ max-width: calc(50% - 1rem);}
+
+		&.-large{
+			img{ max-width: 100%; height: 480px;}
+			p{ font-size: 1.25rem; max-width: 736px; margin-bottom: 2rem;}
+		}
+	}
+
+}
